@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find affordable ACA health insurance plans. Compare coverage options and get expert help today.">
+    <title>ACA Health Insurance Plans - Compare & Enroll Today</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>ACA Health Plans</h1>
+                </div>
+                <div class="header-phone">
+                    <a href="tel:1-800-555-1234" class="phone-link">
+                        <svg class="phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 16.92v3.02a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3.02a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span class="phone-number">1-800-555-1234</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Find Affordable Health Insurance Plans</h2>
+                <p class="hero-subtitle">Compare ACA marketplace plans and get expert guidance to find the coverage that's right for you.</p>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <p class="countdown-label">CLAIM WITHIN THE NEXT</p>
+                    <div class="countdown-timer" id="countdownTimer">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="countdownDays">00</span>
+                            <span class="countdown-label-small">DAYS</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="countdownHours">00</span>
+                            <span class="countdown-label-small">HRS</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="countdownMinutes">00</span>
+                            <span class="countdown-label-small">MIN</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="countdownSeconds">00</span>
+                            <span class="countdown-label-small">SEC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Direct Click-to-Call (Hidden on Desktop) -->
+                <div class="mobile-cta-container">
+                    <a href="tel:1-800-555-1234" class="mobile-cta-phone" id="mobileCtaPhone">
+                        <svg class="cta-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 16.92v3.02a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3.02a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <div class="cta-phone-content">
+                            <span class="cta-phone-label">Call Now for Free Assistance</span>
+                            <span class="cta-phone-number">1-800-555-1234</span>
+                        </div>
+                    </a>
+                    <p class="business-hours">Call within business hours (Mon–Fri, 8 AM – 7 PM EST)</p>
+                </div>
+
+                <!-- Desktop Form (Hidden on Mobile) -->
+                <div class="desktop-form-container" id="desktopFormContainer">
+                    <div class="form-header">
+                        <h3 class="form-title">Get Your Free Quote Today</h3>
+                        <p class="form-subtitle">Fill out the form below and a licensed agent will call you immediately</p>
+                    </div>
+                    <form class="lead-form" id="leadForm">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="firstName">First Name</label>
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    name="firstName" 
+                                    placeholder="Enter your first name"
+                                    required
+                                    aria-label="First name"
+                                >
+                            </div>
+                            <div class="form-field">
+                                <label for="lastName">Last Name</label>
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    name="lastName" 
+                                    placeholder="Enter your last name"
+                                    required
+                                    aria-label="Last name"
+                                >
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="email">Email Address</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="Enter your email"
+                                    required
+                                    aria-label="Email address"
+                                >
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">Phone Number</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="(555) 123-4567"
+                                    required
+                                    aria-label="Phone number"
+                                >
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="zipCode">ZIP Code</label>
+                                <input 
+                                    type="text" 
+                                    id="zipCode" 
+                                    name="zipCode" 
+                                    placeholder="Enter your ZIP code"
+                                    maxlength="5"
+                                    pattern="[0-9]{5}"
+                                    required
+                                    aria-label="ZIP code"
+                                >
+                            </div>
+                            <div class="form-field">
+                                <label for="householdSize">Household Size</label>
+                                <select id="householdSize" name="householdSize" required aria-label="Household size">
+                                    <option value="">Select</option>
+                                    <option value="1">1 person</option>
+                                    <option value="2">2 people</option>
+                                    <option value="3">3 people</option>
+                                    <option value="4">4 people</option>
+                                    <option value="5">5+ people</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-consent">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <span>By clicking the "Continue" button below, I hereby give express written consent to receive e-mail, SMS/Text messages, direct-to-voicemail messages, other messaging, automatic telephone dialing system, auto dialer, and/or artificial or pre-recorded voice, from or on behalf of ACA Health Plans regardless of whether my telephone number is on any Do Not Call registry.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">
+                            Continue
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Post-Form Click-to-Call (Hidden Initially) -->
+                <div class="post-form-cta" id="postFormCta" style="display: none;">
+                    <div class="qualification-message">
+                        <h3 class="qualification-title">Congratulations, You've Qualified!</h3>
+                        <p class="qualification-text">Here's your unique Claim Number</p>
+                        <div class="claim-number" id="claimNumber">CLAIM #<span id="claimId"></span></div>
+                        <p class="qualification-subtext">Click below or call now to confirm your spot.</p>
+                    </div>
+                    <a href="tel:1-800-555-1234" class="cta-phone post-form-phone" id="postFormPhone">
+                        <svg class="cta-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 16.92v3.02a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3.02a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <div class="cta-phone-content">
+                            <span class="cta-phone-label">Call Now to Confirm</span>
+                            <span class="cta-phone-number">1-800-555-1234</span>
+                        </div>
+                    </a>
+                    <p class="business-hours">Call within business hours (Mon–Fri, 8 AM – 7 PM EST)</p>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="badge">
+                        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Licensed Agents</span>
+                    </div>
+                    <div class="badge">
+                        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <span>HIPAA Compliant</span>
+                    </div>
+                    <div class="badge">
+                        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                        <span>Secure & Private</span>
+                    </div>
+                    <div class="badge">
+                        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <span>Fast Enrollment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h3 class="section-title">Why Choose ACA Marketplace Plans?</h3>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h4>Affordable Premiums</h4>
+                    <p>Find plans with subsidies and tax credits to lower your monthly costs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏥</div>
+                    <h4>Essential Health Benefits</h4>
+                    <p>All plans include preventive care, emergency services, and prescription coverage.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✅</div>
+                    <h4>Pre-Existing Conditions</h4>
+                    <p>Coverage guaranteed regardless of your health history.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📅</div>
+                    <h4>Open Enrollment</h4>
+                    <p>Enroll during open enrollment or qualify for a special enrollment period.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h3 class="section-title">How It Works</h3>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Enter Your ZIP Code</h4>
+                    <p>Start by entering your location to see available plans in your area.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Compare Plans</h4>
+                    <p>Review plan options, coverage details, and costs side by side.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Get Expert Help</h4>
+                    <p>Speak with a licensed agent to answer questions and find the best fit.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Enroll Today</h4>
+                    <p>Complete your enrollment quickly and securely online or over the phone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h3 class="section-title">What Our Customers Say</h3>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"The agent helped me find a plan that saved me $200 a month. The process was so easy!"</p>
+                    <p class="testimonial-author">— Sarah M., California</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"I was confused about all the options, but they walked me through everything step by step."</p>
+                    <p class="testimonial-author">— James R., Texas</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Great service and I got coverage that includes my doctor. Highly recommend!"</p>
+                    <p class="testimonial-author">— Maria L., Florida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h3 class="cta-title">Ready to Find Your Perfect Plan?</h3>
+                <p class="cta-subtitle">Get free, expert assistance from licensed agents. No obligation, just helpful guidance.</p>
+                <div class="cta-buttons">
+                    <a href="tel:1-800-555-1234" class="btn-cta-large">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 16.92v3.02a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3.02a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Call 1-800-555-1234
+                    </a>
+                    <button type="button" class="btn-secondary" onclick="document.getElementById('zipCode').focus()">
+                        Start Online
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>About</h5>
+                    <p>We help individuals and families find affordable health insurance through the ACA marketplace.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact</h5>
+                    <p><a href="tel:1-800-555-1234">1-800-555-1234</a></p>
+                    <p>Mon-Fri: 8am-8pm EST</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Legal</h5>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms of Service</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ACA Health Plans. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
